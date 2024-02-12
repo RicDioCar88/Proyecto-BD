@@ -1,4 +1,11 @@
 USE KARAOKE_V2;
+
+INSERT INTO AUXILIAR_SALA (TIPO_SALA, CANTIDAD, TAMANHO)VALUES
+(1, 3, 'GRANDE'),
+(2, 3, 'MEDIANA'),
+(3, 6, 'PEQUEÑA')
+;
+
 INSERT INTO EMPLEADO (ID_EMP, USUARIO, NOMBRE, APELLIDO, FEC_NAC, EMAIL, DIRECCION, TLF, TIPO_EMP, JEFE_ID)
 VALUES
 (1, 'usuario1', 'Juan', 'López', '1980-01-15', 'juan.lopez@example.com', 'Calle 123', '12345678901', 'RECEPCIONISTA', 1),
@@ -51,6 +58,7 @@ INSERT INTO REGISTRO_EMPLEADO (SIS_ID, EMP_ID, TURNO) VALUES
 (3, 19, 'NOCTURNO'),
 (3, 20, 'NOCTURNO')
 ;
+
 
 INSERT INTO CLIENTE (ID_CLI, ALIAS_CLI, NOMBRE, APELLIDO, EMAIL, TLF) VALUES 
 ('1', 'jmcglashan0', 'Jeramie McGlashan', 'McGlashan', 'jmcglashan0@sakura.ne.jp', '437-100-3944'),
@@ -2052,6 +2060,47 @@ INSERT INTO CANCION (NUM_CAN, GENERO, TITULO, ARTISTA, ANHO, ENLACE) VALUES
 ('994', 'Party songs', 'Turn Off the Lights', 'Larry Young', '1975', 'http://open.spotify.com/track/2kXBmTMIDIlNSQEeaQl95A')
 ;
 
+INSERT INTO CANTA_CANCION (CLI_ID, CAN_NUM, LIKE_DISLIKE, FEC_CANTO) VALUES
+(16, 91, 'LIKE', '2023-04-01'),
+(16, 92, 'DISLIKE', '2023-04-02'),
+(17, 93, 'LIKE', '2023-04-03'),
+(17, 94, 'LIKE', '2023-04-04'),
+(18, 95, 'DISLIKE', '2023-04-05'),
+(18, 96, 'LIKE', '2023-04-06'),
+(19, 97, 'DISLIKE', '2023-04-07'),
+(19, 98, 'LIKE', '2023-04-08'),
+(20, 99, 'LIKE', '2023-04-09'),
+(20, 100, 'DISLIKE', '2023-04-10')
+;
+INSERT INTO SALA (ID_SALA, DESCR, TIPO_SALA) VALUES
+(1, 'Sala Grande - 12 a 15 personas', 1),
+(2, 'Sala Grande - 12 a 15 personas', 1),
+(3, 'Sala Grande - 12 a 15 personas', 1),
+(4, 'Sala Mediana - 5 a 10 personas', 2),
+(5, 'Sala Mediana - 5 a 10 personas', 2),
+(6, 'Sala Mediana - 5 a 10 personas', 2),
+(7, 'Sala Pequeña - 2 a 4 personas', 3),
+(8, 'Sala Pequeña - 2 a 4 personas', 3),
+(9, 'Sala Pequeña - 2 a 4 personas', 3),
+(10, 'Sala Pequeña - 2 a 4 personas', 3),
+(11, 'Sala Pequeña - 2 a 4 personas', 3),
+(12, 'Sala Pequeña - 2 a 4 personas', 3)
+;
+
+INSERT INTO EQUIPAMIENTO (ID_EQUI, TIPO, MARCA, ANHO_COMPRA) VALUES
+(1, 'Micrófono', 'MarcaX', '2020-01-01'),
+(2, 'Altavoces', 'MarcaY', '2019-05-15'),
+(3, 'Pantallas y proyectores', 'MarcaZ', '2021-11-20'),
+(4, 'Consolas de mezcla de audio', 'MarcaA', '2018-08-10'),
+(5, 'Equipos de reproducción de música', 'MarcaB', '2017-12-05')
+;
+
+INSERT INTO EQUIPAMIENTO_SALA (ID_EQUI, ID_SALA) VALUES
+(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10),
+(2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (2, 10),
+(3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (3, 10)
+;
+
 INSERT INTO VALORACIONES (ID_VAL, COMENTARIO, PUNTUACION, CLI_ID) VALUES
 (1, 'Buen lugar', 4, 125),
 (2, 'Me encantó la música', 5, 743),
@@ -2154,3 +2203,9 @@ INSERT INTO VALORACIONES (ID_VAL, COMENTARIO, PUNTUACION, CLI_ID) VALUES
 (99, 'No volvería', 2, 890),
 (100, 'Buena comida', 4, 123)
 ;
+
+
+
+
+
+
